@@ -6,7 +6,7 @@ import base64
 
 import streamlit as st
 load_dotenv()
-os.environ["OPENAI_API_KEY"] = ""
+os.environ["OPENAI_API_KEY"] = "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"
 openai.api_key = os.environ["OPENAI_API_KEY"]
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
