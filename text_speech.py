@@ -5,7 +5,7 @@ import streamlit as st
 import base64
 
 # Set OpenAI API Key
-openai.api_key = "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"
+openai.api_key = ""
 
 # Function to generate a response from OpenAI GPT
 def get_llm_response(messages, model="gpt-3.5-turbo"):
