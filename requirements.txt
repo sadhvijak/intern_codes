@@ -4,3 +4,4 @@ streamlit_mic_recorder==0.0.4
 openai
 audio_recorder_streamlit
 streamlit-float
+gtts
