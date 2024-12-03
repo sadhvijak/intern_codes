@@ -1,7 +1,8 @@
 import streamlit as st
 import os
 
-from utils import get_answer, text_to_speech, autoplay_audio, speech_to_text
+from utils import get_answer, autoplay_audio, speech_to_text
+# from utils import text_to_speech
 from audio_recorder_streamlit import audio_recorder
 from streamlit_float import *
 
@@ -48,12 +49,12 @@ if st.session_state.messages[-1]["role"] != "assistant":
     with st.chat_message("assistant"):
         with st.spinner("Thinking..."):
             final_response = get_answer(st.session_state.messages)
-        with st.spinner("Generating audio response..."):    
-            audio_file = text_to_speech(final_response)
-            autoplay_audio(audio_file)
+        # with st.spinner("Generating audio response..."):    
+        #     audio_file = text_to_speech(final_response)
+        #     autoplay_audio(audio_file)
         st.write(final_response)
         st.session_state.messages.append({"role": "assistant", "content": final_response})
-        os.remove(audio_file)
+        # os.remove(audio_file)
 
 # Float the footer container and provide CSS to target it with
 footer_container.float("bottom: 0rem;")
