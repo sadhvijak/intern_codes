@@ -6,3 +6,4 @@ audio_recorder_streamlit
 streamlit-float
 gtts
 python-dotenv
+cryptography
